@@ -5,13 +5,25 @@
             name="inputTodo"
             placeholder="Enter todo..."
             class="todo-input"
+            required
             [(ngModel)]="inputTodo"
         />
+        <div class="date-input">
+            <label>Enter due date</label>
+            <input #datepicker
+                class="date-selector"
+                type="date"
+                name="dueDate"
+                required
+                [(ngModel)]="dateInput"
+            />
+        </div>
         <input type="submit" value="Add Todo" class="todo-submit" />
     </form>
     <div *ngFor="let todo of todos" class="todo {{ (todo.completed ? 'done' : '') }}">
         <div class="id">{{todo.id}}</div>
         <div class="content" (click)="toggleDone(todo.id)">{{todo.content}}</div>
+        <div class="date-display">{{todo.dueDate}}</div>
         <button class="delete" (click)="deleteTodo(todo.id)">Remove</button>
     </div>
 </div>

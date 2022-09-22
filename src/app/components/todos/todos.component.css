@@ -25,6 +25,19 @@
 	text-decoration: line-through;
 }
 
+.date-input {
+	margin: 15px 0 0 10px;
+	font-size: 20px;
+}
+
+.date-selector {
+	margin-left: 10px;
+}
+
+.date-display {
+	width: 20%;
+}
+
 .todo-input {
 	display: block;
 	width: 100%;
